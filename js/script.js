@@ -71,14 +71,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
           anchor.addEventListener( "click", (e) => {
             //FOR LOOP CYCLING THROUGH ANCHOR ITEMS
             for( let i = 0; i < anchorList.length; i ++ ){
-              //IF CONDITION FOR ANCHOR ITEMS THAT HAVE NO CLASS NAME
-              if( anchorList[i].className === '' ) {
-                //SETS EVENTS TARGET CLASS NAME TO ACTIVE
-                e.target.className = 'active';
-                //FOR CONDITION NOT MET LEAVE CLASS NAME BLANK
-              }else{
-                anchorList[i].className = '';
-              }
+              //CLEARS CLASS NAME ON ANCHOR OBJECTS
+              anchorList[i].className = '';
+              //SETS ANCHOR CLICK TARGET TO ACTIVE CLASS
+              e.target.className = 'active';
             }
             //SHOWPAGE FUNCTION RETURN PAGE BASED ON CLICK
             showPage( studentListLi, i );
