@@ -22,7 +22,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
       //FOR LOOP CYCLING THROUGH LIST LENGTH
       for( let i = 0; i < list.length; i ++ ){
           //IF CONDITIONAL TO SEE IF ITEMS ARE WITHIN LOW AND HIGH PARAMETERS PER PAGE
-          if( i >= low && i <= high ){
+          if( i >= low && i < high ){
             //IF CONDITION IS TRUE, THOSE TEN ITEMS DISPLAYED
             list[i].style.display = 'block';
             //IF CONDITION IS FALSE, NOTHING IS DISPLAYED
